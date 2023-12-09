@@ -36,7 +36,7 @@ class AuthForm extends React.Component {
         errorCode: "",
         errorMessage: "",
       });
-      this.props.toggleAuthForm();
+      // this.props.toggleAuthForm();
     };
 
     const setErrorState = (error) => {

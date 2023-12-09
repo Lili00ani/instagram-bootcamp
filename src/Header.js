@@ -10,14 +10,9 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showAuthForm: false,
       showUpload: false,
     };
   }
-
-  toggleAuthForm = () => {
-    this.setState((prevState) => ({ showAuthForm: !prevState.showAuthForm }));
-  };
 
   toggleUpload = () => {
     this.setState((prevState) => ({ showUpload: !prevState.showUpload }));
@@ -29,11 +24,11 @@ class Header extends React.Component {
         <div className="navbar">
           <h1>Rocketgram</h1>
           <div className="user-navbar">
-            {this.props.loggedInUser ? (
+            {/* {this.props.loggedInUser ? (
               this.props.loggedInUser.email
             ) : (
               <Button onClick={this.toggleAuthForm}>Sign In</Button>
-            )}
+            )} */}
 
             {this.props.loggedInUser && (
               <Button onClick={this.toggleUpload}>
@@ -46,9 +41,9 @@ class Header extends React.Component {
             )}
           </div>
         </div>
-        {this.state.showAuthForm && (
+        {/* {this.state.showAuthForm && (
           <AuthForm toggleAuthForm={this.toggleAuthForm} />
-        )}
+        )} */}
         {this.state.showUpload && (
           <Upload loggedInUser={this.props.loggedInUser} />
         )}
